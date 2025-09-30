@@ -25,7 +25,6 @@ export default function App() {
   const onSubmit = (data) => {
     const postData = transformData(data);
     console.log('Данные для отправки:', postData);
-    navigate("./success");
     fetch("https://octs.guap.ru/services/n8n/webhook/webhook/05b6e16a-be07-4613-855d-fd185fae3a77", {
       method: "POST",
       headers: {
@@ -34,7 +33,7 @@ export default function App() {
       body: JSON.stringify({ postData })
     }).then((r) => {
       if (r.status === 200) {
-        navigate("/success");
+        navigate("/guap-tp-form/success");
       }
     });
   };
