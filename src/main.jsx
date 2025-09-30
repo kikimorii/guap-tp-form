@@ -9,8 +9,8 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
       <Routes>
-        <Route path="/guap-tp-form" element={<App />} />
-        <Route path="/guap-tp-form/success" element={<Success />} />
+        <Route path="/" element={<App />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
     </StrictMode>
   </BrowserRouter>,

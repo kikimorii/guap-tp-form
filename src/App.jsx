@@ -33,7 +33,7 @@ export default function App() {
       body: JSON.stringify({ postData })
     }).then((r) => {
       if (r.status === 200) {
-        navigate("/guap-tp-form/success");
+        navigate("/success");
       }
     });
   };
