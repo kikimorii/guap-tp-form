@@ -1,0 +1,9 @@
+.react-select {
+    &__placeholder, &__menu * {
+        font-size: 14px;
+
+        @media (min-width: 576px) {
+            font-size: 16px;
+        }
+    }
+}

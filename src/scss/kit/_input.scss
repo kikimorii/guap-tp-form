@@ -1,0 +1,20 @@
+input[type="text"], textarea {
+  padding: $sp-4x $sp-4x;
+  border-radius: $rad-4x;
+  border: none;
+  background-color: $black-100;
+  font-size: 14px;
+  @media (min-width: $breakpoint-sm) {
+    font-size: 16px;
+  }
+}
+
+.error_message {
+  color: $secondary-guap;
+  margin-bottom: 0;
+  font-size: 14px;
+  @media (min-width: $breakpoint-sm) {
+    font-size: 16px;
+  }
+  padding-left: $sp-4x;
+}
