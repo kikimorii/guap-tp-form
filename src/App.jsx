@@ -25,6 +25,7 @@ export default function App() {
   const onSubmit = (data) => {
     const postData = transformData(data);
     console.log('Данные для отправки:', postData);
+    navigate("./success");
     fetch("https://octs.guap.ru/services/n8n/webhook/webhook/05b6e16a-be07-4613-855d-fd185fae3a77", {
       method: "POST",
       headers: {
