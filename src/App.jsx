@@ -67,6 +67,7 @@ export default function App() {
             error={errors.auditorium}
             isDisabled={(auditoriumList === null)}
           />
+          <ImageUploadingWrapper images={images} setImages={setImages} />
           <button
             className={"btn-text primary filled"}
             type="submit"
@@ -76,7 +77,6 @@ export default function App() {
             type="button" onClick={() => { reset(); setAuditoriumList(null) }}
             disabled={isFormEmpty}
           >Сбросить</button>
-          <ImageUploadingWrapper images={images} setImages={setImages} />
         </form>
       </div>
     </>
