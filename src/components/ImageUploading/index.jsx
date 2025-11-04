@@ -1,7 +1,7 @@
 import ImageUploading from "react-images-uploading";
 
 export const ImageUploadingWrapper = ({ images, setImages }) => {
-    const maxNumber = 69;
+    const maxNumber = 3;
 
     const onChange = (imageList, addUpdateIndex) => {
         console.log("Images changed:", imageList, addUpdateIndex);
@@ -44,15 +44,16 @@ export const ImageUploadingWrapper = ({ images, setImages }) => {
                 dragProps
             }) => (
                 <div className="upload__image-wrapper">
-                    <button
+                    {images.length < maxNumber ? (
+                        <button
                         style={isDragging ? { color: "red" } : null}
                         onClick={onImageUpload}
                         {...dragProps}
                     >
                         Click or Drop here
                     </button>
-                    &nbsp;
-                    <button onClick={onImageRemoveAll}>Remove all images</button>
+                    ) : ""}
+                    {images.length > 1 ? (<button onClick={onImageRemoveAll}>Remove all images</button>) : ""}
 
                     {renderImageList(imageList, onImageUpdate, onImageRemove)}
                 </div>
