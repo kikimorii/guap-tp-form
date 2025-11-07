@@ -8,7 +8,7 @@ export const sendDateToServer = (data, images, navigate) => {
     fetch("https://octs.guap.ru/services/n8n/webhook/webhook/05b6e16a-be07-4613-855d-fd185fae3a77", {
       method: "POST",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ postData })
     }).then((r) => {
