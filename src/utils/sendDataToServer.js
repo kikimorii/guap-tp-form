@@ -5,7 +5,9 @@ export const sendDateToServer = (data, images, navigate) => {
     console.log(images);
     const postData = transformData(data, images);
     console.log('Данные для отправки:', postData);
-    fetch("https://octs.guap.ru/services/n8n/webhook/webhook/05b6e16a-be07-4613-855d-fd185fae3a77", {
+    navigate("/loading");
+    // fetch("https://octs.guap.ru/services/n8n/webhook/webhook/05b6e16a-be07-4613-855d-fd185fae3a77", {
+    fetch("", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

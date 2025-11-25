@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import Success from './Success.jsx';
+import Loading from './Loading.jsx';
 import './scss/main.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -10,6 +11,7 @@ createRoot(document.getElementById('root')).render(
     <StrictMode>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/loading" element={<Loading />} />
         <Route path="/success" element={<Success />} />
       </Routes>
     </StrictMode>
