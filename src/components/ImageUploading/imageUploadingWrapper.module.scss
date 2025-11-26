@@ -1,42 +1,42 @@
 .addButton {
-    color: black;
-    padding: 50px;
-    border: 2px dashed #DEDEDE;
+	color: black;
+	padding: 50px;
+	border: 2px dashed #dedede;
 }
 
 .isDragging {
-    color: blue;
+	color: blue;
 }
 
 .image {
-    &Upload {
-        &Wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
+	&Upload {
+		&Wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
 
-    &s {
-        &Wrapper {
-            overflow-x: scroll;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        &Item {
-            display: flex;
-            // flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            & > img {
-                width: 100%;
-            }
-            &Buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    }
+	&s {
+		&Wrapper {
+			overflow-x: scroll;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+		&Item {
+			display: flex;
+			// flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			& > img {
+				width: 100%;
+			}
+			&Buttons {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		}
+	}
 }
