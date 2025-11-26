@@ -42,10 +42,12 @@ export default function App() {
 
 	const values = watch();
 	const isFormEmpty = Object.values(values).every(v => !v);
+	const isFormFull = Object.values(values).every(v => v);
 	const [images, setImages] = useState([]);
 
 	return (
 		<>
+			{Object.values(values).every(v => v)}
 			<div className={styles.wrapper}>
 				<h3>
 					Нашёл поломку?
@@ -92,7 +94,11 @@ export default function App() {
 						isDisabled={auditoriumList === null}
 					/>
 					<ImageUploadingWrapper images={images} setImages={setImages} />
-					<button className={'btn-text primary filled'} type="submit">
+					<button
+						className={`btn-text primary filled ${!isFormFull ? 'disabled' : 'secondary'}`}
+						type="submit"
+						disabled={!isFormFull}
+					>
 						Отправить
 					</button>
 					<button
