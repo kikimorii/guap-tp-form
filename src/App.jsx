@@ -47,7 +47,6 @@ export default function App() {
 
 	return (
 		<>
-			{Object.values(values).every(v => v)}
 			<div className={styles.wrapper}>
 				<h3>
 					Нашёл поломку?
