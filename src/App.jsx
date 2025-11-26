@@ -94,7 +94,7 @@ export default function App() {
 					/>
 					<ImageUploadingWrapper images={images} setImages={setImages} />
 					<button
-						className={`btn-text primary filled ${!isFormFull ? 'disabled' : 'secondary'}`}
+						className={`btn-text filled ${!isFormFull ? 'disabled' : 'primary'}`}
 						type="submit"
 						disabled={!isFormFull}
 					>
