@@ -4,6 +4,7 @@ export const TextInput = ({
 	registerField,
 	error,
 	textarea,
+	disabled,
 }) => {
 	return (
 		<>
@@ -16,7 +17,12 @@ export const TextInput = ({
 					{...register(registerField)}
 				/>
 			) : (
-				<input type="text" placeholder={placeholder} {...register(registerField)} />
+				<input
+					type="text"
+					placeholder={placeholder}
+					{...register(registerField)}
+					disabled={disabled}
+				/>
 			)}
 		</>
 	);

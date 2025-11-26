@@ -11,6 +11,6 @@ export const schema = yup.object().shape({
 		.required('Помогите нам понять, что сломалось. Опишите суть случившегося'),
 	building: yup.object().required('Укажи корпус, иначе не найдём проблему'),
 	auditorium: yup
-		.object()
+		.string()
 		.required('Без номера аудитории мы починим что-то другое'),
 });

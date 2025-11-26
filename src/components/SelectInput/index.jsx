@@ -10,7 +10,6 @@ export const SelectInput = ({
 	options,
 	error,
 	isDisabled,
-	changeAuditorium,
 }) => (
 	<>
 		{error && <p className="error_message">{error.message}</p>}
@@ -25,12 +24,7 @@ export const SelectInput = ({
 					placeholder={placeholder}
 					options={options}
 					value={field.value}
-					onChange={value => {
-						field.onChange(value);
-						if (changeAuditorium) {
-							changeAuditorium(value.value);
-						}
-					}}
+					onChange={value => field.onChange(value)}
 					isDisabled={isDisabled}
 					styles={selectStyles}
 				/>
