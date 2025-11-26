@@ -56,12 +56,18 @@ button {
 					&:hover {
 						background-color: $pink-600;
 					}
+					&.sm {
+						padding: $sp-4x;
+					}
 				}
 				&.primary {
 					color: $white-main;
 					background-color: $primary-guap;
 					&:hover {
 						background-color: $blue-600;
+					}
+					&.sm {
+						padding: $sp-4x;
 					}
 				}
 				&.disabled {

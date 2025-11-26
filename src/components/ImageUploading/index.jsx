@@ -19,21 +19,23 @@ export const ImageUploadingWrapper = ({ images, setImages }) => {
 				<div className={styles.imagesWrapper}>
 					{imageList.map((image, index) => (
 						<div key={index} className={styles.imagesItem}>
-							<img src={image.data_url} alt="" />
+							{/* <img src={image.data_url} alt="" /> */}
+							<i className={`${styles.imagesItemIcon} bi bi-file-image`}></i>
+							<p className={styles.imagesItemTitle}>{image.file.name}</p>
 							<div className={styles.imagesItemButtons}>
 								<button
 									type="button"
-									className="btn-text primary filled"
+									className="btn-text primary filled sm"
 									onClick={() => onImageUpdate(index)}
 								>
-									Обновить
+									<i class="bi bi-arrow-clockwise"></i>
 								</button>
 								<button
 									type="button"
-									className="btn-text secondary filled"
+									className="btn-text secondary filled sm"
 									onClick={() => onImageRemove(index)}
 								>
-									Удалить
+									<i class="bi bi-trash3"></i>
 								</button>
 							</div>
 						</div>

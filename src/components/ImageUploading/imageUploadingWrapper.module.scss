@@ -26,16 +26,26 @@
 		}
 		&Item {
 			display: flex;
-			// flex-direction: column;
 			align-items: center;
-			gap: 20px;
+			justify-content: space-between;
+			gap: 10px;
+			padding-left: 16px;
 			& > img {
 				width: 100%;
 			}
 			&Buttons {
 				display: flex;
-				flex-direction: column;
-				gap: 10px;
+				gap: 15px;
+			}
+			&Title {
+				margin-bottom: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				flex-grow: 1;
+			}
+			&Icon {
+				color: #005aaa;
 			}
 		}
 	}
