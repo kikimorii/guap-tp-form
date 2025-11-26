@@ -12,5 +12,6 @@ export const schema = yup.object().shape({
 	building: yup.object().required('Укажи корпус, иначе не найдём проблему'),
 	auditorium: yup
 		.string()
-		.required('Без номера аудитории мы починим что-то другое'),
+		.required('Без номера аудитории мы починим что-то другое')
+		.matches(/^\d{2}-\d{2}$/, 'Формат аудитории: XX-XX (например: 13-48)'),
 });
