@@ -71,7 +71,8 @@ export const ImageUploadingWrapper = ({ images, setImages }) => {
 							type="button"
 							{...dragProps}
 						>
-							Перетащите фотографию или нажмите для выбора
+							<p>Перетащите фотографию или нажмите для выбора</p>
+							<small>Максимально можно загрузить 3 фотографии</small>
 						</button>
 					) : (
 						''

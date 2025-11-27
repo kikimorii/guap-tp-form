@@ -5,7 +5,12 @@
 }
 
 .isDragging {
-	color: blue;
+	color: #005aaa;
+	background-color: #f6f6f6;
+
+	& > small {
+		color: #669ccc !important;
+	}
 }
 
 .image {
@@ -14,6 +19,12 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+			p {
+				margin-bottom: 0;
+			}
+			& small {
+				color: #7a7a7a;
+			}
 		}
 	}
 
