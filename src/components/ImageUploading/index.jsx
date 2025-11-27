@@ -72,7 +72,7 @@ export const ImageUploadingWrapper = ({ images, setImages }) => {
 							{...dragProps}
 						>
 							<p>Перетащите фотографию или нажмите для выбора</p>
-							<small>Максимально можно загрузить 3 фотографии</small>
+							<small>Максимально можно загрузить {maxNumber} фотографии</small>
 						</button>
 					) : (
 						''
